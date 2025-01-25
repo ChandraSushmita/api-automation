@@ -1,5 +1,10 @@
 package base;
 
+import io.restassured.RestAssured;
+
 public class BaseTest {
-    // BaseTest can include setup for shared configurations if needed
+    public BaseTest() {
+        // Base URL for Rest-Assured
+        RestAssured.baseURI = "https://api.coindesk.com/v1/bpi/currentprice.json";
+    }
 }
